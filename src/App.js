@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 
-import ContactForm from './components/ContactForm ';
-import ContactList from './components/ContactList ';
+import ContactForm from './components/ContactForm';
+import ContactList from './components/ContactList';
 import Filter from './components/Filter';
 
 export default class App extends Component {
@@ -64,7 +64,7 @@ export default class App extends Component {
     const visibleContacts = this.getVisibleContacts();
 
     return (
-      <div>
+      <div style={{ margin: '20px auto' }}>
         <h1>Phonebook</h1>
         <ContactForm
           onChange={this.handleChange}
