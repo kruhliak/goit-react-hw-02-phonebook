@@ -7,7 +7,7 @@ function ContactList({ contactsData, onDeleteContact }) {
       {contactsData.map(contact => (
         <Item key={contact.id}>
           {contact.name}: {contact.number}
-          <Button type="button" onCItemck={() => onDeleteContact(contact.id)}>
+          <Button type="button" onClick={() => onDeleteContact(contact.id)}>
             Удалить
           </Button>
         </Item>

@@ -1,14 +1,15 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const List = styled.ul`
-  background-color: #f5f5f5;
+  padding: 5px;
   display: flex;
   flex-direction: column;
-  margin: 20px 0 0 0 ;
+  justify-content: center;
+  align-items: baseline;
+  margin: 20px auto;
 `;
 
 export const Item = styled.li`
-  background-color: #f5f5f5;
   margin: 10px 0;
 `;
 

@@ -64,7 +64,7 @@ export default class App extends Component {
     const visibleContacts = this.getVisibleContacts();
 
     return (
-      <div style={{ margin: '20px auto' }}>
+      <div id="container">
         <h1>Phonebook</h1>
         <ContactForm
           onChange={this.handleChange}
