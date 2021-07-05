@@ -12,6 +12,7 @@ export const Form = styled.form`
     &:hover,
     :focus {
       background-color: #bffab0d3;
+      transform: scale(1.1);
     }
   }
 `;

@@ -18,6 +18,7 @@ export const List = styled.ul`
       &:hover,
     :focus {
       background-color: #f09797;
+      transform: scale(1.05);
     }
     }
   }
