@@ -1,6 +1,8 @@
+import {Thumb} from './Filter.styles'
+
 function Filter({ onChange, filter }) {
   return (
-    <div>
+    <Thumb>
       <p>Find contacts by name</p>
       <input
         type="text"
@@ -12,7 +14,7 @@ function Filter({ onChange, filter }) {
         required
         autoComplete="off"
       />
-    </div>
+    </Thumb>
   );
 }
 
