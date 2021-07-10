@@ -21,26 +21,16 @@ export default class App extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
+  handleSubmit = (name, number) => {
+    const { contacts } = this.state;
     const randomId = nanoid();
-    const { name, contacts } = this.state;
     const findContact = contacts.find(contact => contact.name.includes(name));
 
     findContact
       ? alert(`${name} is already in contacts`)
       : this.setState({
-          contacts: [
-            ...this.state.contacts,
-            { id: randomId, name: this.state.name, number: this.state.number },
-          ],
+          contacts: [...contacts, { id: randomId, name, number }],
         });
-
-    this.resetForm();
-  };
-
-  resetForm = () => {
-    this.setState({ name: '', number: '' });
   };
 
   getVisibleContacts = () => {
@@ -58,18 +48,13 @@ export default class App extends Component {
   };
 
   render() {
-    const { name, number, filter } = this.state;
+    const { filter } = this.state;
     const visibleContacts = this.getVisibleContacts();
 
     return (
       <div id="container">
         <h1>Phonebook</h1>
-        <ContactForm
-          onChange={this.handleChange}
-          onSubmit={this.handleSubmit}
-          name={name}
-          number={number}
-        />
+        <ContactForm onSubmit={this.handleSubmit} />
         <h2>Contacts</h2>
         <Filter filter={filter} onChange={this.handleChange} />
         <ContactList
